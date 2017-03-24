@@ -48,3 +48,6 @@ jacocoTestReport {
 // Define the main class for the application
 mainClassName = 'ohtu.ohtuvarasto.Main'
 
+run {
+    standardInput = System.in
+}

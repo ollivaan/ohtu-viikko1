@@ -21,6 +21,7 @@ repositories {
     jcenter()
 }
 
+
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:20.0'
@@ -32,6 +33,15 @@ dependencies {
 jar {
     manifest {
         attributes 'Main-Class': 'ohtu.ohtuvarasto.Main'
+    }
+}
+plugins {
+    id 'com.github.kt3k.coveralls' version '2.8.1'
+}
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
     }
 }
 
